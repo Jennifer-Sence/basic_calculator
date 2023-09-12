@@ -1,5 +1,6 @@
 const buttonsEl = document.querySelectorAll
 ("button");
+const inputFieldEl = document.getElementById("result");
 
 for (let i = 0; i < buttonsEl.length; i++) {
     buttonsEl[i].addEventListener("click",()=>{
@@ -16,13 +17,13 @@ for (let i = 0; i < buttonsEl.length; i++) {
 }
 
 function clearResult(){
-
+    inputFieldEl.value="";
 }
 
 function calculateResult(){
-
+    inputFieldEl.value = eval(inputFieldEl.value);
 }
 
-function appendValue(){
-
+function appendValue(buttonValue){
+   inputFieldEl.value += buttonValue;
 }
